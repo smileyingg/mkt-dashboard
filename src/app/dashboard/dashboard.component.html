@@ -1,68 +1,91 @@
-<div class="dashboard">
-  <h1>Dashboard</h1>
-  <div class="row" style="padding-bottom: 30px;">
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #AED581;">
-        <div class="card-body">
-          <h1>10<i class="fa fa-users" aria-hidden="true" style="font-size: 60px;padding-left: 150px;opacity :0.2;"></i>
-          </h1>
-          <h5 class="card-title">Total Patlent</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #90CAF9 ;">
-        <div class="card-body">
-          <h1>5<i class="fa fa-user-plus" aria-hidden="true"
-              style="font-size: 60px;padding-left: 170px;opacity :0.2;"></i></h1>
-          <h5 class="card-title">New Patient</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #CFD8DC;">
-        <div class="card-body">
-          <h1 class="card-text">5</h1>
-          <h5 class="card-title">Old Patient</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #FFCC80;">
-        <div class="card-body">
-          <h1>0<i class="fa fa-calendar" aria-hidden="true"
-              style="font-size: 60px;padding-left: 180px;opacity :0.2;"></i></h1>
-          <h5 class="card-title">Total Appointment</h5>
-        </div>
-      </div>
-    </div>
-  </div>
+<mat-sidenav-container class="tp-container">
+  <mat-sidenav mode="over" #sidenav style="width:10rem;padding-left: 1rem">
+    <section class="tp-section">
+      <a class="nav-link active" routerLink="">Main</a>
+    </section>
+    <section class="tp-section">
+      <a class="nav-link active" routerLink="">Edit</a>
+    </section>
+  </mat-sidenav>
 
-  <hr>
-  <div class="row" style="padding-top: 30px;">
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #E57373;">
-        <div class="card-body">
-          <h1 class="card-text">300,000</h1>
-          <h5 class="card-title">Revenue</h5>
+  <mat-sidenav-content>
+    <div class="dashboard">
+      <div class="row">
+        <a href="javascript:;">
+          <i class="fa fa-bars" aria-hidden="true" (click)="sidenav.toggle()"
+            style="font-size:30px;padding-left:20px;color: black"></i>
+        </a>
+        <div class="col-8">
+          <h3>Dashboard</h3>
+        </div>
+        <div class="col-3">
+          <h5 style="color:royalblue;" align="right">{{ today | date: 'EEE dd-MMM-yyyy HH:mm' }}</h5>
+        </div>
+      </div>
+      <div class="row" style="padding-bottom: 30px;">
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #AED581;">
+            <div class="card-body">
+              <h1>10<i class="fa fa-users" aria-hidden="true"
+                  style="font-size: 60px;opacity :0.2;padding-left: 150px;"></i></h1>
+              <h5 class="card-title">Total Patlent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #90CAF9 ;">
+            <div class="card-body">
+              <h1>5<i class="fa fa-user-plus" aria-hidden="true"
+                  style="font-size: 60px;opacity :0.2;padding-left: 170px;"></i></h1>
+              <h5 class="card-title">New Patient</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #CFD8DC;">
+            <div class="card-body">
+              <h1 class="card-text">5</h1>
+              <h5 class="card-title">Old Patient</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #FFCC80;">
+            <div class="card-body">
+              <h1>0<i class="fa fa-calendar" aria-hidden="true"
+                  style="font-size: 60px;opacity :0.2;padding-left: 170px;"></i></h1>
+              <h5 class="card-title">Total Appointment</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row" style="padding-top: 30px;">
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #E57373;">
+            <div class="card-body">
+              <h1 class="card-text">300,000</h1>
+              <h5 class="card-title">Revenue</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #A1887F;">
+            <div class="card-body">
+              <h1 class="card-text">200,000</h1>
+              <h5 class="card-title">Invoice</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="background-color: #FFF176 ;">
+            <div class="card-body">
+              <h1 class="card-text">100,000</h1>
+              <h5 class="card-title">Receipt</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #A1887F;">
-        <div class="card-body">
-          <h1 class="card-text">200,000</h1>
-          <h5 class="card-title">Invoice</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card" style="background-color: #FFF176 ;">
-        <div class="card-body">
-          <h1 class="card-text">100,000</h1>
-          <h5 class="card-title">Receipt</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </mat-sidenav-content>
